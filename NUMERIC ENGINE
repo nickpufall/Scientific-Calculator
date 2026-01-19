@@ -1,0 +1,9 @@
+import { evaluate } from 'mathjs'
+
+export function numericEval(expr) {
+  return {
+    type: 'numeric',
+    result: evaluate(expr).toString(),
+    steps: []
+  }
+}
