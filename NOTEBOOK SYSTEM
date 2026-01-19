@@ -1,0 +1,5 @@
+export default function Notebook({ cells, setCells }) {
+  return cells.map((cell, i) => (
+    <Cell key={i} {...cell} />
+  ))
+}
