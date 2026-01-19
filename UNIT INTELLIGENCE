@@ -1,0 +1,10 @@
+import { evaluate } from 'mathjs'
+
+export function unitEval(expr) {
+  const res = evaluate(expr)
+  return {
+    type: 'units',
+    result: res.toString(),
+    unit: res.formatUnits()
+  }
+}
