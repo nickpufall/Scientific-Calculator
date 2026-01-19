@@ -1,0 +1,16 @@
+import nerdamer from 'nerdamer'
+
+export function stepSolve(expr) {
+  const steps = []
+  let current = nerdamer(expr)
+
+  steps.push(`Original: ${expr}`)
+  steps.push(`Expanded: ${current.expand()}`)
+  steps.push(`Simplified: ${current.simplify()}`)
+
+  return {
+    type: 'steps',
+    result: current.simplify().toString(),
+    steps
+  }
+}
