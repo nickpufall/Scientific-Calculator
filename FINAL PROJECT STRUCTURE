@@ -1,0 +1,39 @@
+ultimate-calculator/
+│
+├── core/
+│   ├── numeric.js        # math.js evaluation
+│   ├── symbolic.js      # nerdamer CAS
+│   ├── steps.js         # step-by-step logic
+│   ├── units.js         # unit intelligence
+│   └── dispatch.js      # decides WHAT engine runs
+│
+├── graph/
+│   ├── function.js
+│   ├── parametric.js
+│   ├── matrix.js
+│   └── implicit.js
+│
+├── notebook/
+│   ├── Cell.js
+│   ├── Notebook.js
+│   └── executor.js
+│
+├── db/
+│   ├── database.js
+│   └── schema.sql
+│
+├── pages/
+│   ├── index.js
+│   ├── compute.js
+│   ├── notebook.js
+│   ├── dashboard.js
+│   └── share/[id].js
+│
+├── api/
+│   └── compute.js
+│
+└── components/
+    ├── MathText.js
+    ├── Graph.js
+    ├── MatrixView.js
+    └── StepViewer.js
