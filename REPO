@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial Ultimate Calculator platform"
+git branch -M main
+git remote add origin https://github.com/nickpufall/Scientific-Calculator.git
+git push -u origin main
