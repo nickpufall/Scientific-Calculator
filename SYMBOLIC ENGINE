@@ -1,0 +1,11 @@
+import nerdamer from 'nerdamer'
+import 'nerdamer/Algebra'
+import 'nerdamer/Calculus'
+
+export function symbolicEval(expr) {
+  return {
+    type: 'symbolic',
+    result: nerdamer(expr).toString(),
+    steps: []
+  }
+}
