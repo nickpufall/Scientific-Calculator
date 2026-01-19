@@ -1,0 +1,19 @@
+import { numericEval } from './numeric'
+import { symbolicEval } from './symbolic'
+import { unitEval } from './units'
+import { stepSolve } from './steps'
+
+export function compute(query, mode = 'auto') {
+  if (mode === 'steps') return stepSolve(query)
+  if (mode === 'symbolic') return symbolicEval(query)
+  if (mode === 'units') return unitEval(query)
+
+  // AUTO MODE (default)
+  if (query.match(/[a-zA-Z]/) && query.includes('x'))
+    return symbolicEval(query)
+
+  if (query.match(/(cm|kg|m|s|N|J)/))
+    return unitEval(query)
+
+  return numericEval(query)
+}
