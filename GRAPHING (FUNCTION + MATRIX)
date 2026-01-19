@@ -1,0 +1,14 @@
+import { evaluate } from 'mathjs'
+
+export function sampleFunction(expr, min=-10, max=10) {
+  const xs = []
+  const ys = []
+
+  for (let i=0; i<400; i++) {
+    const x = min + (i/400)*(max-min)
+    xs.push(x)
+    ys.push(evaluate(expr, { x }))
+  }
+
+  return { xs, ys }
+}
